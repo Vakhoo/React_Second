@@ -1,11 +1,10 @@
 import './App.css';
+import PostsHome from './pages/posts';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        React
-      </header>
+    <div className="container">
+      <PostsHome />
     </div>
   );
 }
