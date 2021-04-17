@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { PostsProvider } from '../../../providers/PostsProvider';
 import PostsListItem from './posts-list-item';
 import './posts-lists.css';
