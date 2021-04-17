@@ -1,6 +1,23 @@
+import { useContext, useState } from 'react';
+import { PostsProvider } from '../../../providers/PostsProvider';
+
 function AddPostsForm(props) {
+  const { onPostsAdd } = useContext(PostsProvider);
+  const [title, setTitle] = useState('');
+  const [body, setBody] = useState('');
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const newPost = {
+      title,
+      body,
+      id: Math.random().toString(),
+    };
+    onPostsAdd(newPost);
+  };
+
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <div className="mb-3">
         <label htmlFor="title" className="form-label">
           Title:
@@ -9,10 +26,10 @@ function AddPostsForm(props) {
           type="text"
           className="form-control"
           id="title"
-          // value={title}
-          // onChange={(e) => {
-          //   setTitle(e.target.value);
-          // }}
+          value={title}
+          onChange={(e) => {
+            setTitle(e.target.value);
+          }}
         />
         <label htmlFor="description" className="form-label">
           Description:
@@ -21,26 +38,13 @@ function AddPostsForm(props) {
           type="text"
           className="form-control"
           id="description"
-          // value={title}
-          // onChange={(e) => {
-          //   setTitle(e.target.value);
-          // }}
-        />
-      </div>
-      {/* <div className="mb-3 form-check">
-        <input
-          type="checkbox"
-          className="form-check-input"
-          id="completed"
-          value={completed}
+          value={body}
           onChange={(e) => {
-            setCompleted(e.target.checked);
+            setBody(e.target.value);
           }}
         />
-        <label className="form-check-label" htmlFor="completed">
-          Check me out
-        </label>
-      </div> */}
+      </div>
+
       <button type="submit" className="btn btn-primary">
         Submit
       </button>
