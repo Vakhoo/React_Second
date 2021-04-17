@@ -1,4 +1,4 @@
-const baseURL = 'http://jsonplaceholder.typicode.com/posts';
+const baseURL = 'https://jsonplaceholder.typicode.com/posts';
 
 export class API_POSTS_SERVICE {
   static async getPostListAsync({ start = 0, limit = 10 }) {
