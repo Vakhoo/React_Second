@@ -6,10 +6,10 @@ function UsersHome(props) {
   return (
     <UsersProviderComponent>
       <div className="row">
-        <div className="col-3">
+        <div className="col-6">
           <AddUsersForm />
         </div>
-        <div className="col-9">
+        <div className="col-6">
           <UsersLists />
         </div>
       </div>
