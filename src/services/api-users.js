@@ -1,7 +1,7 @@
-const baseURL = 'https://jsonplaceholder.typicode.com/posts';
+const baseURL = 'https://jsonplaceholder.typicode.com/users';
 
-export class API_POSTS_SERVICE {
-  static async getPostListAsync({ start = 0, limit = 10 }) {
+export class API_USERS_SERVICE {
+  static async getUsersListAsync({ start = 0, limit = 10 }) {
     try {
       const response = await fetch(
         baseURL + `?_start=${start}&_limit=${limit}`,
@@ -12,6 +12,5 @@ export class API_POSTS_SERVICE {
       console.trace(err);
     }
   }
-
 }
-export default API_POSTS_SERVICE;
+export default API_USERS_SERVICE;
