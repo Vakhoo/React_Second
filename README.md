@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-To visit site [Click Here](https://davaleba2.netlify.app/).
+# To visit builded project [Click Here](https://davaleba2.netlify.app/).
 
 ## Available Scripts
 
